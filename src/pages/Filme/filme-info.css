@@ -1,0 +1,9 @@
+
+
+.filme-info{
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  padding: 0 8px;
+}

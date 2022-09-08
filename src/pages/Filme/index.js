@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
+import './filme-info.css';
 import api from '../../services/api';
 
 function Filme(){
@@ -33,9 +33,24 @@ function Filme(){
     }
   }, [])
 
+  if(loading){
+    return(
+      <div className="filme-info">
+        <h1>Carregando detalhes...</h1>
+      </div>
+    )
+  }
+
   return(
-    <div>
-      <h1>ACESSANDO FILME {id} </h1>
+    <div className="filme-info">
+      <h1>{filme.title}</h1>
+      <img src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt={filme.title}/>
+
+      <h3>Sinopse</h3>
+      <span>{filme.overview}</span>
+
+      <strong>Avaliação: {filme.vote_average} /10</strong>
+
     </div>
   )
 }
