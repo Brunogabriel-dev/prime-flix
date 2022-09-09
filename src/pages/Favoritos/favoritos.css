@@ -18,6 +18,19 @@
 .meus-filmes ul li{
   list-style: none;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.meus-filmes div{
+  display: flex;
   justify-content: center;
-  
+  align-items: center;
+}
+
+.meus-filmes div a {
+  text-decoration: none;
+  color: #116feb;
+  margin-right: 14px;
 }
