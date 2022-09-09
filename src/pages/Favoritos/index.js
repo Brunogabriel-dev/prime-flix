@@ -1,8 +1,19 @@
+import { useEffect, useState } from 'react';
+import './favoritos.css'
 
 function Favoritos(){
+  const [filmes, setFilmes] = useState([])
+
+  useEffect(()=>{
+
+    const minhaLista = localStorage.getItem("@primeflix");
+    setFilmes(JSON.parse(minhaLista) || [])
+
+  },[])
+
   return(
-    <div>
-      <h1>TELA FAVORITOS</h1>
+    <div className="meus-filmes">
+      <h1>Meus filmes</h1>
     </div>
   )
   }

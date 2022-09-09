@@ -1,4 +1,5 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Favoritos from './pages/Favoritos';
 
 import Home from './pages/Home';
 import Filme from './pages/Filme';
@@ -13,7 +14,8 @@ function RoutesApp(){
       <Header/>
       <Routes>
         <Route path="/" element={ <Home/> } />
-        <Route path="/filme/:id" element={<Filme/>}/>
+        <Route path="/filme/:id" element={ <Filme/> }/>
+        <Route path="/favoritos" element={ <Favoritos/> }/>
 
         <Route path="*" element={ <Erro/> } />
       </Routes>
