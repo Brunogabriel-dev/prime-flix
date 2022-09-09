@@ -51,7 +51,7 @@ function Filme(){
     }
 
     filmesSalvos.push(filme);
-    localStorage.setItem("@primeflix", JSON.stringify(filmesSalvos));
+    localStorage.setItem("@primeflix", JSON.stringify(filmesSalvo));
     alert("FILME SALVO COM SUCESSO");
 
   }
