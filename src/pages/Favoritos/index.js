@@ -12,6 +12,11 @@ function Favoritos(){
 
   },[])
 
+
+  function excluirFilme(id){
+    alert("ID CLICADO " +id)
+  }
+
   return(
     <div className="meus-filmes">
       <h1>Meus filmes</h1>
@@ -21,10 +26,10 @@ function Favoritos(){
           return(
             <li key={item.id}>
               <span>{item.title}</span>
-              
+
               <div>
                 <Link to={`/filme/${item.id}`}>Ver detalhes</Link>
-                <button>Excluir</button>
+                <button onClick={() => excluirFilme(item.id) }>Excluir</button>
               </div>
             </li>
           )
