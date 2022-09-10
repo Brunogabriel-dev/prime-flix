@@ -39,7 +39,7 @@ function Filme(){
 
 
   function salvarFilme(){
-    const minhaLista = localstorage.getItem("@primeflix");
+    const minhaLista = localStorage.getItem("@primeflix");
 
     let filmesSalvos = JSON.parse(minhaLista) || [];
 
@@ -51,7 +51,7 @@ function Filme(){
     }
 
     filmesSalvos.push(filme);
-    localStorage.setItem("@primeflix", JSON.stringify(filmesSalvo));
+    localStorage.setItem("@primeflix", JSON.stringify(filmesSalvos));
     alert("FILME SALVO COM SUCESSO");
 
   }
